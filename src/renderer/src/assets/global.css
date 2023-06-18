@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif; */
+  user-select: none;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 15px;
+}
+
+*,
+a,
+button {
+  cursor: default;
+  user-select: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.loading {
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  z-index: 10;
+  /* background-color: #eff6ff; */
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  .loading {
+    background-color: rgb(17 24 39) !important;
+  }
+} */
+
+.loader {
+  display: grid;
+  position: relative;
+  width: 6rem;
+  height: 6rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.125rem;
+}
+
+.subloader {
+  position: relative;
+  background-color: #2563eb;
+  width: 100%;
+  height: 100%;
+}
+
+.loader > div {
+  transform: scale(0);
+  transform-origin: center center;
+  animation: loader 2s infinite linear;
+}
+
+.loader > div:nth-of-type(1),
+.loader > div:nth-of-type(5),
+.loader > div:nth-of-type(9) {
+  animation-delay: 0.4s;
+}
+
+.loader > div:nth-of-type(4),
+.loader > div:nth-of-type(8) {
+  animation-delay: 0.2s;
+}
+
+.loader > div:nth-of-type(2),
+.loader > div:nth-of-type(6) {
+  animation-delay: 0.6s;
+}
+
+.loader > div:nth-of-type(3) {
+  animation-delay: 0.8s;
+}
+
+@keyframes loader {
+  0% {
+    transform: scale(0);
+  }
+
+  40% {
+    transform: scale(1);
+  }
+
+  80% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+input[type='date']::-webkit-inner-spin-button,
+input[type='date']::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  height: 0;
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+.sdp {
+  --font: 'Be Vietnam Pro', sans-serif !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  html .sdp,
+  html .stp {
+    background-color: #111827;
+    --disabled-color: #6b7280;
+    --outline: 1px solid #111827;
+    color: #fff;
+  }
+
+  html .sdp button,
+  html .stp button,
+  html .sassy--select__dropdown {
+    background-color: #1f2937;
+  }
+
+  .sdp .sassy--option__active,
+  .sdp .sassy--option:hover,
+  .stp .sassy--option__active,
+  .stp .sassy--option:hover {
+    background-color: #3b82f6;
+  }
+
+  html {
+    --code-bg-color: hsla(212deg, 100%, 77%, 10%);
+  }
+}
+
+.sdp button.sdp--date-btn__selected {
+  background-color: #3b82f6;
+}
