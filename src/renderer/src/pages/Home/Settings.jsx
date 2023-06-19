@@ -413,7 +413,7 @@ const Settings = () => {
                             {/* <span className="text-xl font-bold text-white">App Infomation</span> */}
                             <div className="flex flex-col items-start justify-start w-full mt-3 md:w-full lg:w-3/4">
                               <span className="text-base font-medium text-white">
-                                App version: {window.api.info.env()['npm_package_version']}
+                                App version: 1.0.1
                               </span>
                               <span className="text-base font-medium text-white">
                                 Date created: 03/06/2023
@@ -421,7 +421,7 @@ const Settings = () => {
                             </div>
                             <div className="flex flex-col items-start justify-start w-full mt-3 md:w-full lg:w-3/4">
                               <span className="text-base font-medium text-white">
-                                Author: {window.api.info.env()['npm_package_author_name']}
+                                Author: Le Quan
                               </span>
                               <span className="text-base font-medium text-white">
                                 Email: lequanruby@gmail.com

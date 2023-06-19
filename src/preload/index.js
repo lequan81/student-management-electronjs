@@ -7,11 +7,6 @@ const api = {
       return message
     })
   },
-  info: {
-    env() {
-      return { ...process.env }
-    }
-  },
   store: {
     get(key) {
       return ipcRenderer.sendSync('electron-store-get', key)

@@ -112,13 +112,18 @@ const Home = () => {
                   /> */}
 
                   {homeData.length === 0 ? (
-                    <Card
-                      key={0}
-                      title="Income"
-                      value={96}
-                      color="purple"
-                      icon={<CreditCardIcon className="w-7 h-7" strokeWidth="2" />}
-                    />
+                    <div className="flex col-span-12 items-center my-auto justify-center w-full h-full">
+                      <div className="flex flex-col items-center w-full max-w-md p-6 mx-auto text-center text-blue-500 bg-white rounded-lg dark:bg-gray-800">
+                        <div className="grid h-full px-4 place-content-center">
+                          <h1 className="text-3xl font-bold tracking-wide text-gray-800 uppercase dark:text-white">
+                            404 | Not Found
+                          </h1>
+                        </div>
+                        <p className="mt-4 tracking-wide text-gray-700 dark:text-white">
+                          {'Nothing to show from homeData spreadsheet'}
+                        </p>
+                      </div>
+                    </div>
                   ) : (
                     <>
                       {homeData.map((data, index) => (

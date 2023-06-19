@@ -88,16 +88,6 @@ const Classes = () => {
                   isNotFound ? (
                     <div className="flex items-center justify-center w-full h-full">
                       <div className="flex flex-col items-center w-full max-w-md p-6 mx-auto text-center text-blue-500 bg-white rounded-lg dark:bg-gray-800">
-                        {/* <button
-                          onClick={setShowAddModal}
-                          className="inline-flex items-center h-8 px-2.5 py-2 text-sm font-medium text-center text-white bg-green-700 rounded hover:bg-green-800 ring-none focus:outline-none dark:bg-green-600 dark:hover:bg-green-700"
-                        >
-                                                    <PlusIcon
-                            className="inline w-5 h-5 mr-0 font-semibold text-white md:mr-2 lg:md-2"
-                            strokeWidth={2}
-                          />
-                          <span className="hidden md:inline lg:inline">Not Found</span>
-                        </button> */}
                         <div className="grid h-full px-4 place-content-center">
                           <h1 className="text-3xl font-bold tracking-wide text-gray-800 uppercase dark:text-white">
                             404 | Not Found
@@ -110,7 +100,7 @@ const Classes = () => {
                     </div>
                   ) : (
                     <div className="flex items-center justify-center w-full h-full">
-                      <div className="flex flex-col items-center w-full max-w-md p-6 mx-auto text-center text-blue-500 bg-gray-200 border-2 border-gray-500 border-dashed rounded-lg dark:bg-white dark:bg-gray-700/30">
+                      <div className="flex flex-col items-center w-full max-w-md p-6 mx-auto text-center text-blue-500 bg-gray-200 border-2 border-gray-500 border-dashed rounded-lg dark:bg-gray-700/30">
                         <button
                           onClick={setShowAddModal}
                           className="inline-flex items-center h-8 px-2.5 py-2 text-sm font-medium text-center text-white bg-green-700 rounded hover:bg-green-800 ring-none focus:outline-none dark:bg-green-600 dark:hover:bg-green-700"

@@ -114,6 +114,7 @@ app.whenReady().then(() => {
   if (process.platform === 'win32') {
     app.setAppUserModelId(app.isPackaged ? 'com.electron' : process.execPath)
   }
+  getHomeData()
   getAllClassData()
   createWindow()
 
@@ -369,10 +370,10 @@ async function getHomeData() {
   data.map(async (rowData) => {
     homeData.push({
       title: rowData['title'],
-      data: rowData['value']
+      value: rowData['value']
     })
-    store.set('homeData', homeData)
   })
+  store.set('homeData', homeData)
 }
 
 // IPC listener
@@ -384,9 +385,6 @@ ipcMain.on('electron-store-set', async (event, key, val) => {
 })
 ipcMain.on('electron-store-delete', async (event, val) => {
   event.returnValue = await store.delete(val)
-})
-ipcMain.on('electron-getHomeData', async (event) => {
-  event.returnValue = await getHomeData()
 })
 ipcMain.on('electron-takeAttendance', async (event, key, index) => {
   await takeAttendance(key, index)
