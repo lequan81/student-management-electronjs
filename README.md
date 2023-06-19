@@ -1,4 +1,4 @@
-# student-manager
+# Student Management App
 
 An Electron App for management students
 
